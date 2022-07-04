@@ -5,7 +5,7 @@ function random (min = 0, max = 3000) {
 function wait (msg, time) {
     return new Promise((resolve, reject) => {
 
-        if ( typeof msg !== 'string') {
+        if (typeof msg !== 'string') {
             reject('Bad Value')
             return
         }
@@ -30,10 +30,11 @@ function wait (msg, time) {
 // })
 // .catch(e => console.log(e))
 
+// Quando uma função assíncrona é chamada, ela retorna uma Promise
 async function execute() {
     try {
         // Não usei o await, então ela está em pending
-        const fase1 = wait('Fase 1', random()) 
+        const fase1 = await wait('Fase 1', random()) 
         console.log(fase1)
     
         // Ela está em rejected
