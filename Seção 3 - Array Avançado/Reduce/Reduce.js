@@ -10,19 +10,19 @@ const total = numeros.reduce(function(acumulador, valor, indice, array) {
      return acumulador
 }, 0); // Valor inicial do acumulador
 
-//console.log(total);
+console.log(total);
 
 const pares = numeros.reduce((acumulador, valor, indice, array) => {
     if (valor % 2 === 0) acumulador.push(valor);
     return acumulador;
 }, []) // Acumulador vai ser um array
-//console.log(pares);
+console.log(pares);
 
 const dobro = numeros.reduce((acumulador, valor) => {
     acumulador.push(valor * 2);
     return acumulador;
 }, [])
-//console.log(dobro)
+console.log(dobro)
 
 // Lembrando -> O método push() adiciona um ou mais elementos ao final de um array
 
